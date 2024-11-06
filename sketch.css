@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width:100vw;
+    height:100vh;
+    margin:0 auto;
+    border:2px solid red;
+}
+
+.grid{
+    /*Dividing container div height and width by 16
+    for each grids height and width */
+    width: calc(100vw / 16);
+    height: calc(100vh / 16);
+    background-color:violet;
+    border: 1px solid black;
+    
+}
+
+.hovered{
+    background-color: green;
+}
