@@ -14,7 +14,8 @@ function populateScreen(gridPerSide){
         grid.style.width = `${sizePerSide}px`;
 //Add hovered class to change color of the grid when hovered    
         grid.addEventListener('mouseenter',()=>{
-            grid.classList.add('hovered');
+            //randomizes the hover rgb values
+            grid.style.backgroundColor = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
         })
         container.appendChild(grid);
     }
@@ -24,6 +25,10 @@ function clearGrid(){
         container.removeChild(container.firstChild);
     }
 }
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 256);
+  }
 populateScreen(16);
 
 button.addEventListener('click', ()=>{
